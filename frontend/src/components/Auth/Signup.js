@@ -14,7 +14,7 @@ const Signup = () => {
   const handleSignup = async () => {
     try {
       setLoading(true);
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, {
+      await axios.post(`http://localhost:5000/api/auth/signup`, {
         email,
         name,
         password,
@@ -65,7 +65,7 @@ const Signup = () => {
           className="bg-green-500 text-white px-4 py-2 w-full rounded-md"
           onClick={handleSignup}
         >
-           {loading ? <Loader color="white" /> : "Signup"} 
+          {loading ? <Loader color="white" /> : "Signup"}
         </button>
         <p className="mt-3 text-sm text-center">
           Already registered?{" "}
