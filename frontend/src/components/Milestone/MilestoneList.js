@@ -10,7 +10,7 @@ const MilestoneList = () => {
   useEffect(() => {
     const fetchMilestones = async () => {
       setLoading(true);
-      const response = await axios.get("http://localhost:5000/api/milestones", {
+      const response = await axios.get("https://babysteps-z8jn.onrender.com/api/milestones", {
         headers: {
           Authorization: `Bearer ${jwtToken}`,
         },
@@ -26,7 +26,7 @@ const MilestoneList = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/milestones/${id}`, {
+    await axios.delete(`https://babysteps-z8jn.onrender.com/api/milestones/${id}`, {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
@@ -35,7 +35,7 @@ const MilestoneList = () => {
   };
 
   const handleSave = async () => {
-    const response = await axios.get("http://localhost:5000/api/milestones", {
+    const response = await axios.get("https://babysteps-z8jn.onrender.com/api/milestones", {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },

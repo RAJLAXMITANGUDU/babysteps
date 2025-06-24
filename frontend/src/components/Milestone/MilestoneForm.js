@@ -10,7 +10,7 @@ const MilestoneForm = ({ milestone, onSave }) => {
     e.preventDefault();
     if (milestone) {
       await axios.put(
-        `http://localhost:5000/api/milestones/${milestone._id}`,
+        `https://babysteps-z8jn.onrender.com/api/milestones/${milestone._id}`,
         { title, date, note },
         {
           headers: {
@@ -20,7 +20,7 @@ const MilestoneForm = ({ milestone, onSave }) => {
       );
     } else {
       await axios.post(
-        "http://localhost:5000/api/milestones",
+        "https://babysteps-z8jn.onrender.com/api/milestones",
         { title, date, note },
         {
           headers: {

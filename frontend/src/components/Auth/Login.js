@@ -10,7 +10,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://babysteps-z8jn.onrender.com/api/auth/login",
         { email, password }
       );
       const { token } = response.data;

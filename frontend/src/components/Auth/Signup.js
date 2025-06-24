@@ -14,7 +14,7 @@ const Signup = () => {
   const handleSignup = async () => {
     try {
       setLoading(true);
-      await axios.post(`http://localhost:5000/api/auth/signup`, {
+      await axios.post(`https://babysteps-z8jn.onrender.com/api/auth/signup`, {
         email,
         name,
         password,

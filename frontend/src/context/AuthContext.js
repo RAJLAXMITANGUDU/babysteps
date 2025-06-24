@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+            const response = await axios.post('https://babysteps-z8jn.onrender.com/api/auth/login', { email, password });
             const { token } = response.data;
 
             localStorage.setItem('jwtToken', token);
